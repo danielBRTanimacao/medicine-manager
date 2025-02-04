@@ -1,3 +1,7 @@
 # ENVs
 
 .env
+
+# DATABASE
+
+db.sqlite3
