@@ -10,6 +10,11 @@ body {
     flex-direction: column;
 }
 
+header {
+    background-color: #28a745;
+    color: white;
+}
+
 /* Formulário */
 form {
     width: 30%;
@@ -99,4 +104,15 @@ a {
 
 a:hover {
     background: #0056b3;
+}
+
+@media (max-width: 767.98px) {
+    form {
+        width: 80%;
+    }
+}
+@media (max-width: 991.98px) {
+    form {
+        width: 60%;
+    }
 }

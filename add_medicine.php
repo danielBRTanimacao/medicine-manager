@@ -27,7 +27,9 @@
     <link rel="stylesheet" href="public/assets/css/index.css">
 </head>
 <body>
-    <h1>Adicionar Medicamento</h1>
+    <header>
+        <h1>Adicionar Medicamento</h1>
+    </header>
     
     <?php if (!empty($message)) : ?>
         <p><?= $message ?></p>

@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="public/assets/css/index.css">
 </head>
 <body>
-    <h1>Lista de Medicamentos</h1>
+    <header>
+        <h1>Lista de Medicamentos</h1>
+    </header>
     <div>
         <a href="add_medicine.php">Adicionar Medicamento</a>
     </div>
