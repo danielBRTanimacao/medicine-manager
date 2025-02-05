@@ -36,7 +36,11 @@
             ?>
                 <?php foreach ($medicines as $medicine): ?>
                     <tr>
-                        <td><?= htmlspecialchars($medicine['id']) ?></td>
+                        <td>
+                            <a href="spefic_medicine.php">
+                                <?= htmlspecialchars($medicine['id']) ?>
+                            </a>
+                        </td>
                         <td><?= htmlspecialchars($medicine['name']) ?></td>
                         <td><?= htmlspecialchars($medicine['description']) ?></td>
                         <td><?= htmlspecialchars($medicine['stock']) ?></td>

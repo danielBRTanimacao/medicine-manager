@@ -90,6 +90,14 @@ tr:nth-child(even) {
     background: #f9f9f9;
 }
 
+td a {
+    background-color: #218838;
+}
+
+td a:hover {
+    background-color: #28a745;
+}
+
 /* Botões e Links */
 a {
     display: inline-block;
