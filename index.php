@@ -15,7 +15,7 @@
 </head>
 <body>
     <h1>Lista de Medicamentos</h1>
-    <a href="add_medicine.php">Adicionar Medicamento</a>
+    <a href="../medicine-manager/src/pages/add_medicine.php">Adicionar Medicamento</a>
     <table border="1">
         <tr>
             <th>ID</th>
@@ -24,15 +24,26 @@
             <th>Estoque</th>
             <th>Data de Validade</th>
         </tr>
-        <?php foreach ($medicines as $medicine): ?>
-            <tr>
-                <td><?= $medicine['id'] ?></td>
-                <td><?= $medicine['name'] ?></td>
-                <td><?= $medicine['description'] ?></td>
-                <td><?= $medicine['stock'] ?></td>
-                <td><?= $medicine['expiry_date'] ?></td>
-            </tr>
-        <?php endforeach; ?>
+        <?php
+            try {
+                if (empty($medicines)) {
+                    throw new Exception("Adicione os medicamentos!");
+                }
+            ?>
+                <?php foreach ($medicines as $medicine): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($medicine['id']) ?></td>
+                        <td><?= htmlspecialchars($medicine['name']) ?></td>
+                        <td><?= htmlspecialchars($medicine['description']) ?></td>
+                        <td><?= htmlspecialchars($medicine['stock']) ?></td>
+                        <td><?= htmlspecialchars($medicine['expiry_date']) ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php
+            } catch (Exception $e) {
+                echo "<tr><td colspan='5'>" . $e->getMessage() . "</td></tr>";
+            }
+        ?>
     </table>
 </body>
 </html>
