@@ -1,5 +1,5 @@
 <?php
-    require_once '../medicine-manager/src/config/database.php';
+    require_once __DIR__ . '/../config/database.php';
 
     class Medicine {
         public static function getAll() {

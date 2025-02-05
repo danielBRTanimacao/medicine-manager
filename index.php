@@ -15,7 +15,9 @@
 </head>
 <body>
     <h1>Lista de Medicamentos</h1>
-    <a href="../medicine-manager/src/pages/add_medicine.php">Adicionar Medicamento</a>
+    <div>
+        <a href="add_medicine.php">Adicionar Medicamento</a>
+    </div>
     <table border="1">
         <tr>
             <th>ID</th>
