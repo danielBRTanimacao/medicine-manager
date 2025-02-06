@@ -11,5 +11,12 @@
             $stmt = Database::connect()->prepare("INSERT INTO medicines (name, description, stock, expiry_date) VALUES (?, ?, ?, ?)");
             return $stmt->execute([$name, $description, $stock, $expiry_date]);
         }
+        
+        public static function getById($id) {
+        $stmt = Database::connect()->prepare("SELECT * FROM medicines WHERE id = ?");
+        $stmt->execute([$id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+        }
+
     }
 ?>

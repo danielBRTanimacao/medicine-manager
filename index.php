@@ -37,7 +37,7 @@
                 <?php foreach ($medicines as $medicine): ?>
                     <tr>
                         <td>
-                            <a href="spefic_medicine.php">
+                            <a href="medicine_details.php?id=<?= $medicine['id'] ?>">
                                 <?= htmlspecialchars($medicine['id']) ?>
                             </a>
                         </td>

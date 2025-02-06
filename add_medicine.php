@@ -50,7 +50,7 @@
 
         <button type="submit">Salvar</button>
     </form>
-    <br>
+    
     <div>
         <a href="index.php">Voltar à Lista</a>
     </div>
