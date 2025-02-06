@@ -99,7 +99,9 @@ td a:hover {
 }
 
 /* Botões e Links */
-a {
+a,
+.red-a,
+.danger-a {
     display: inline-block;
     padding: 10px 15px;
     background: #007bff;
@@ -112,6 +114,22 @@ a {
 
 a:hover {
     background: #0056b3;
+}
+
+.danger-a {
+    background-color: gold;
+}
+
+.danger-a:hover {
+    background-color: darkgoldenrod;
+}
+
+.red-a {
+    background-color: red;
+}
+
+.red-a:hover {
+    background-color: darkred;
 }
 
 @media (max-width: 767.98px) {

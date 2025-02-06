@@ -13,10 +13,19 @@
         }
         
         public static function getById($id) {
-        $stmt = Database::connect()->prepare("SELECT * FROM medicines WHERE id = ?");
-        $stmt->execute([$id]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+            $stmt = Database::connect()->prepare("SELECT * FROM medicines WHERE id = ?");
+            $stmt->execute([$id]);
+            return $stmt->fetch(PDO::FETCH_ASSOC);
         }
-
+     
+        public static function updateMedicine($id, $name, $description, $stock, $expiry_date) {
+            $stmt = Database::connect()->prepare("UPDATE medicines SET name = ?, description = ?, stock = ?, expiry_date = ? WHERE id = ?");
+            return $stmt->execute([$name, $description, $stock, $expiry_date, $id]);
+        }
+        
+        public static function deleteMedicine($id) {
+            $stmt = Database::connect()->prepare("DELETE FROM medicines WHERE id = ?");
+            return $stmt->execute([$id]);
+        }
     }
 ?>

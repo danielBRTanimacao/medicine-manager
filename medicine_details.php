@@ -55,6 +55,19 @@ if (!$medicine) {
     
     <div>
         <a href="index.php">Voltar</a>
+        <a href="#" class="red-a">Deletar</a>
+        <a href="#" class="danger-a">Modificar</a>
     </div>
+
+    <div class="modal">
+        teste
+    </div>
+    <div class="modal">
+        <form action="./medicine_update.php" method="post">
+            <input type="hidden" name="idMedicine" value="<?=$id?>">
+            <button type="submit">sub</button>
+        </form>
+    </div>
+    <script src="./public/assets/js/index.js"></script>
 </body>
 </html>
