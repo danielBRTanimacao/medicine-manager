@@ -1,4 +1,16 @@
 /* Estilização Geral */
+:root {
+    --yellow: #f9cb43;
+    --white: #f4f4f4;
+    --green: #28a745;
+    --blue: #007bff;
+    --red: #be3144;
+    --dk-blue: #0056b3;
+    --dk-green: #218838;
+    --dk-yellow: #fba518;
+    --dk-red: #872341;
+}
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -11,14 +23,14 @@ body {
 }
 
 header {
-    background-color: #28a745;
-    color: white;
+    background-color: var(--green);
+    color: var(--white);
 }
 
 /* Formulário */
 form {
     width: 30%;
-    background: white;
+    background: var(--white);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
@@ -50,7 +62,7 @@ input {
 }
 
 button {
-    background: #28a745;
+    background: var(--green);
     color: white;
     border: none;
     cursor: pointer;
@@ -59,7 +71,7 @@ button {
 }
 
 button:hover {
-    background: #218838;
+    background: var(--dk-green);
 }
 
 /* Tabela */
@@ -68,7 +80,7 @@ table {
     max-width: 800px;
     margin: 20px auto;
     border-collapse: collapse;
-    background: white;
+    background: var(--white);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
@@ -82,8 +94,8 @@ td {
 }
 
 th {
-    background: #28a745;
-    color: white;
+    background: var(--green);
+    color: var(--white);
 }
 
 tr:nth-child(even) {
@@ -91,11 +103,11 @@ tr:nth-child(even) {
 }
 
 td a {
-    background-color: #218838;
+    background-color: var(--green);
 }
 
 td a:hover {
-    background-color: #28a745;
+    background-color: var(--dk-green);
 }
 
 /* Botões e Links */
@@ -104,8 +116,8 @@ a,
 .danger-a {
     display: inline-block;
     padding: 10px 15px;
-    background: #007bff;
-    color: white;
+    background: var(--blue);
+    color: var(--white);
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
@@ -113,23 +125,23 @@ a,
 }
 
 a:hover {
-    background: #0056b3;
+    background: var(--dk-blue);
 }
 
 .danger-a {
-    background-color: gold;
+    background-color: var(--yellow);
 }
 
 .danger-a:hover {
-    background-color: darkgoldenrod;
+    background-color: var(--dk-yellow);
 }
 
 .red-a {
-    background-color: red;
+    background-color: var(--red);
 }
 
 .red-a:hover {
-    background-color: darkred;
+    background-color: var(--dk-red);
 }
 
 @media (max-width: 767.98px) {
@@ -141,4 +153,71 @@ a:hover {
     form {
         width: 60%;
     }
+}
+
+/* Modal - Fundo Escuro */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal - Conteúdo */
+.modal-content {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Modal - Inputs */
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Modal - Botões */
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-content button:hover {
+    background: var(--dk-green);
+}
+
+/* Botão de Fechar */
+.close-modal {
+    background: var(--red);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.close-modal:hover {
+    background: var(--dk-red);
 }

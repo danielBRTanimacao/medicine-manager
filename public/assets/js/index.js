@@ -1,4 +1,3 @@
-// Função para abrir o modal de edição
 function openModal() {
     document.getElementById("editModal").style.display = "block";
 }

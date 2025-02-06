@@ -77,10 +77,8 @@
                 <div>
                     <button type="submit">Salvar Alterações</button>
                 </div>
+                <a href="#" class="danger-a" onclick="closeModal()">Fechar</a>
             </form>
-            <div>
-                <button onclick="closeModal()">Fechar</button>
-            </div>
         </div>
 
         <script src="./public/assets/js/index.js"></script>
